@@ -1,0 +1,61 @@
+.AboutSWrapper{
+    background: #c2f1df;
+    width: 100%;
+    height: 25rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20%;
+}
+
+.AboutSWrapper img{
+    width: 300px;
+}
+
+.AboutSWrapper >div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.AboutSWrapper >div h1{
+    color: #295536;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.AboutSWrapper >div p{
+    color: #333;
+    font-weight: 300;
+    font-size: 0.9rem;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .AboutSWrapper{
+        height: 30rem;
+        padding: 0 10% ;
+    }
+
+    .AboutSWrapper img{
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    
+    .AboutSWrapper{
+        height: 20rem;
+        padding: 0 3.5%;
+    }
+
+    .AboutSWrapper img{
+        width: 250px;
+    }
+}

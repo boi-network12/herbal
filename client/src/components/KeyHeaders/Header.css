@@ -101,6 +101,7 @@
     bottom: 30px;
     color: #000;
     z-index: 999;
+    flex-wrap: nowrap;
 }
 
 
