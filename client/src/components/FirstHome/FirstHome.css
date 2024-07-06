@@ -1,0 +1,268 @@
+.FirstHomeWrapper{
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 30rem;
+    margin-bottom: 30px;
+}
+
+.FirstHomeWrapper .secondDiv{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.FirstHomeWrapper .secondDiv .leafImg{
+    position: absolute;
+    z-index: -1;
+    width: 80%;
+    right: -70px;
+}
+
+
+.FirstHomeWrapper .secondDiv .bgImg{
+    width: 70%;
+    height: 100%;
+    border-radius: 35px;
+    object-fit: cover;
+} 
+
+.FirstHomeWrapper .secondDiv .FistPop{
+    position: absolute;
+    z-index: 1;
+    top: 180px;
+    left: -120px;
+    background: #2e4936;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.FirstHomeWrapper .secondDiv .FistPop > img{
+    width: 60px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+}
+
+.FirstHomeWrapper .secondDiv .FistPop > p{
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.FirstHomeWrapper .secondDiv .FistPop > p h3{
+    font-weight: 500;
+    color: #6d965e;
+}
+
+.FirstHomeWrapper .secondDiv .FistPop > p span{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.FirstHomeWrapper .secondDiv .FistPop aside{
+    color: #444434;
+    background: #3fe9a8;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+
+.FirstHomeWrapper .secondDiv .SecondPop{
+    position: absolute;
+    z-index: 1;
+    bottom: 30px;
+    right: -50px;
+    background: #ffca41;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    height: 80px;
+}
+
+.FirstHomeWrapper .secondDiv .SecondPop > img{
+    width: 60px;
+    background: #2e4936;
+    padding: 10px;
+    border-radius: 10px;
+    aspect-ratio: 1;
+}
+
+.FirstHomeWrapper .secondDiv .SecondPop aside{
+    color: #444434;
+    background: #ddd;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+.FirstHomeWrapper .secondDiv .SecondPop > p{
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.FirstHomeWrapper .secondDiv .SecondPop > p h3{
+    font-weight: 500;
+    color: #333;
+}
+
+.FirstHomeWrapper .secondDiv .SecondPop > p span{
+    font-weight: 300;
+    font-size: 14px;
+}
+
+.FirstHomeWrapper .FirstDiv{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    padding: 10% 5%;
+    gap: 10%;
+}
+
+.FirstHomeWrapper .FirstDiv > span{
+    color: #295536;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.FirstHomeWrapper .FirstDiv > h1{
+    color: #2e4936;
+    font-size: 2.2rem;
+    font-weight: 600;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.FirstHomeWrapper .FirstDiv > p{
+    color: #2e4936;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: left;
+}
+
+.FirstHomeWrapper .FirstDiv > aside{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+}
+
+
+
+.FirstHomeWrapper .FirstDiv > aside a button{
+    background-color: #2e4936;
+    color: #ddd;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.FirstHomeWrapper .FirstDiv > aside a p{
+    color: #2e4936;
+    font-weight: 400;
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .FirstHomeWrapper{
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        height: 60rem;
+    }
+
+    .FirstHomeWrapper .secondDiv{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+    .FirstHomeWrapper .secondDiv .bgImg{
+        width: 90%;
+        
+    }
+
+    .FirstHomeWrapper .secondDiv .leafImg{
+        position: absolute;
+        z-index: -1;
+        width: 80%;
+        right: 0;
+    }
+    
+    .FirstHomeWrapper .secondDiv .FistPop{
+        left: 10px;
+    }
+
+    .FirstHomeWrapper .secondDiv .SecondPop{
+        right: 40px;
+    }
+
+    .FirstHomeWrapper .FirstDiv{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 26rem;
+        padding: 10% 5%;
+        gap: 10%;
+        margin-bottom: 3rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    
+    .FirstHomeWrapper{
+        width: 100%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .FirstHomeWrapper .secondDiv .bgImg{
+        width: 95%;
+    }
+    
+    .FirstHomeWrapper .secondDiv .leafImg{
+        position: absolute;
+        z-index: -1;
+        width: 80%;
+        right: 0;
+    }
+
+    .FirstHomeWrapper .secondDiv .SecondPop{
+        right: 40px;
+    }
+}

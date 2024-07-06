@@ -1,0 +1,190 @@
+.footer{
+    width: 100%;
+    background-color: #295536;
+    height: 30rem;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer .topAbsolute{
+    width: 75%;
+    position: absolute;
+    background-color: #3fe9a8;
+    top: -80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
+    border-radius: 30px;
+}
+
+.footer .topAbsolute form {
+    width: 80%;
+    background: #f2f2f2;
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.footer .topAbsolute form input{
+    width: 70%;
+    background: #cccddd;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    height: 40px;
+    outline: none;
+    padding: 0 10px;
+    color: #333;
+}
+
+.footer .topAbsolute form button{
+    all: unset;
+    height: 40px;
+    width: 20%;
+    background: #295536;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+
+.topFooter{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 70%;
+    padding: 10px;
+    height: 100%;
+    position: static;
+}
+
+.topFooter > img{
+    position: absolute;
+    width: 250px;
+    bottom: 30px;
+    left: 100px;
+}
+
+.topFooter .topFooterImg{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.topFooterImg > img{
+    width: 60%;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 30px;
+}
+
+.topFooterImg >h1{
+    font-size: 2rem;
+    color: #f2f2f2;
+    font-weight: 600;
+    width: 80%;
+    padding-top: 30px;
+}
+
+.topFooter .topFooterGrid{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.topFooter .topFooterGrid ul{
+    list-style: none;
+    color: #f2f2f2;
+}
+
+.topFooter .topFooterGrid ul li{
+    margin-bottom: 20px;
+    color: #f2f2f2;
+}
+.topFooter .topFooterGrid ul li a {
+    color: #f2f2f2;
+}
+
+.footer .downFooter{
+    border-top: 1px solid #ccc;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #f2f2f2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.footer .downFooter p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer .downFooter p a{
+    font-size: 1rem;
+    color: #f2f2f2;
+    text-decoration: underline;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .topFooter{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .footer{
+        height: 40rem;
+    }
+
+    .footer .downFooter{
+        padding: 10px;
+    }
+
+    .footer .downFooter p{
+        font-size: 0.6rem;
+        font-weight: 400;
+    }
+
+    .topFooter .topFooterImg{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .topFooter .topFooterImg h1{
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    
+    .footer{
+        height: 30rem;
+    }
+
+    .footer .topFooter{
+        width: 100%;
+    }
+
+    .footer .downFooter p{
+        font-size: 0.9rem;
+        font-weight: 400;
+    }
+}
