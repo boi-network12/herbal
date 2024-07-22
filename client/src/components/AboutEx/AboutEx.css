@@ -1,0 +1,82 @@
+.AboutExContainer{
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    height: 45rem;
+}
+
+.AboutExContainer .box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.AboutExContainer .firstBox img{
+    width: 65%;
+}
+
+.AboutExContainer .secondBox{
+    padding: 0 30px;
+    gap: 30px;
+    text-align: left;
+    align-items: start;
+}
+
+.AboutExContainer .secondBox span{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #2cdd99;
+}
+
+.AboutExContainer .secondBox h2{
+    font-size: 1.6rem;
+    color: #295536;
+}
+
+.AboutExContainer .secondBox p{
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.AboutExContainer .secondBox a button{
+    background-color: #218a62;
+    color: #fff;
+    font-weight: 300;
+    width: 140px;
+    height: 42px;
+    border: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .AboutExContainer{
+        width: 100%;
+        height: 60rem;
+        flex-direction: column;
+    }
+
+    .AboutExContainer .firstBox img{
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    .AboutExContainer{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .AboutExContainer .firstBox img{
+        width: 80%;
+    }
+}

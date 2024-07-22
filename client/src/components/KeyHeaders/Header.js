@@ -51,10 +51,9 @@ const Header = () => {
                 
                     <ul className={`navBar ${navOpen ? "open" : "closed"}`}>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about-us">About_us</Link></li>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/about-us">About Us</Link></li>
+                        <li><Link to="/contact-us">Contact us</Link></li>
+                        <li><Link to="/terms">Terms & Condition</Link></li>
                     </ul>
                 
             </div>
