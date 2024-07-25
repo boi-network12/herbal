@@ -1,0 +1,145 @@
+.formContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 70%;
+    height: 45rem;
+}
+
+.formContainer .imgSetDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+}
+
+.formContainer .imgSetDiv img{
+    width: 40%;
+}
+
+.formContainer > form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+}
+
+.formContainer > form > h2{
+    font-size: 2.9rem;
+    color: #295536;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+
+.formContainer > form > div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+}
+
+.formContainer > form > div label{
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: #333;
+    font-weight: 300;
+}
+
+.formContainer > form > div input{
+    width: 60%;
+    height: 40px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.formContainer > form > p{
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.formContainer > form > p input{
+    cursor: pointer;
+}
+
+.formContainer > form > p a{
+    color: #295536;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.formContainer > form button{
+    background: #295536;
+    color: #fff;
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+    border: none;
+}
+
+.formContainer > form > span{
+    color: #333;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.formContainer > form > span p{
+    cursor: pointer;
+}
+
+.formContainer > form > span:hover p{
+    text-decoration: underline;
+    color: #295536;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    
+    .formContainer{
+        width: 100%;
+    }
+
+    .formContainer .imgSetDiv{
+        display: none;
+    }
+
+    .formContainer > form > div input{
+        width: 95%;
+        border: none;
+        background: #ddd;
+    }
+
+    .formContainer > form {
+        padding-left: 20px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    
+    .formContainer .imgSetDiv img{
+        width: 60%;
+    }
+
+    .formContainer{
+        width: 100%;
+    }
+
+    .formContainer > form > div input{
+        width: 80%;
+    }
+}

@@ -1,0 +1,73 @@
+.contactHeadingContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 20rem;
+    background: #3fe9a8;
+    overflow: hidden;
+    padding: 0 30px;
+}
+
+.contactHeadingContainer .secContainerOnContactHeading{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    position: relative;
+}
+
+.contactHeadingContainer .secContainerOnContactHeading .firstImg{
+    width: 150px;
+    position: absolute;
+    top: 5px;
+    left: 30px;
+}
+
+.contactHeadingContainer .secContainerOnContactHeading .secondImg{
+    width: 150px;
+    position: absolute;
+    right: 30px;
+    bottom: 5px;
+}
+
+.contactHeadingContainer .secContainerOnContactHeading h1{
+    color: #295536;
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+
+.contactHeadingContainer .secContainerOnContactHeading p{
+    color: #333;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .contactHeadingContainer{
+        height: 25rem;
+    }
+
+    .contactHeadingContainer .secContainerOnContactHeading{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    .contactHeadingContainer .secContainerOnContactHeading{
+        width: 70%;
+        height: 100%;
+    }
+    
+}

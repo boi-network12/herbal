@@ -1,0 +1,93 @@
+.MapFormContainer{
+    width: 70%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    height: 40rem;
+}
+
+.MapFormContainer .divContainer{
+    width: 100%;
+    height: 80%;
+}
+
+.MapFormContainer .divContainer.formDiv{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+}
+
+.MapFormContainer .divContainer.formDiv p{
+    font-weight: 500;
+    color: #295536;
+    font-size: 1.2rem;
+}
+
+.MapFormContainer .divContainer.formDiv span{
+    font-weight: 300;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.MapFormContainer .divContainer.formDiv form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.MapFormContainer .divContainer.formDiv form input{
+    height: 45px;
+    width: 100%;
+    border: none;
+    background: #e9e8e8;
+    padding: 0 10px;
+    outline: none;
+}
+
+.MapFormContainer .divContainer.formDiv form textarea{
+    width: 100%;
+    height: 140px;
+    border: none;
+    background: #e9e8e8;
+    padding: 10px;
+    outline: none;
+}
+
+.MapFormContainer .divContainer.formDiv form button{
+    height: 40px;
+    width: 120px;
+    cursor: pointer;
+    border: none;
+    text-transform: capitalize;
+    color: #fff;
+    background: #295536;
+}
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .MapFormContainer{
+        width: 100%;
+        flex-direction: column;
+        height: 80rem;
+    }
+    
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    .MapFormContainer{
+        width: 100%;
+    }
+    
+}
