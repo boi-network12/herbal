@@ -1,58 +1,63 @@
-import React, {  } from 'react'
-import "./sideCart.css"
-import { FaMinus, FaPlus, FaRegTimesCircle } from "react-icons/fa"
-import LogoImage from "../../assets/Tablet.jpg"
+import React, { useState, useEffect } from 'react';
+import "./sideCart.css";
+import { FaMinus, FaPlus, FaRegTimesCircle } from "react-icons/fa";
 
+const SideCart = ({ onClose }) => {
+    const [items, setItems] = useState([]);
 
-const items = [
-    {
-        id: 1,
-        image: LogoImage,
-        price: "30",
-        name: "std drug",
-        quantity: 1,
-    },
-    {
-        id: 1,
-        image: LogoImage,
-        price: "10",
-        name: "head drug",
-        quantity: 1,
-    },
-    {
-        id: 1,
-        image: LogoImage,
-        price: "320",
-        name: "hiv drug",
-        quantity: 1,
-    },
-]
+    useEffect(() => {
+        // Fetch items from local storage
+        const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+        setItems(cartItems);
+    }, []);
 
-const SideCart = ({onClose}) => {
-    
+    const handleIncrement = (id) => {
+        // Update quantity for the item
+        const updatedItems = items.map(item => {
+            if (item.id === id) {
+                return { ...item, quantity: item.quantity + 1 };
+            }
+            return item;
+        });
+        setItems(updatedItems);
+        // Save updated cart to local storage
+        localStorage.setItem('cart', JSON.stringify(updatedItems));
+    };
 
+    const handleDecrement = (id) => {
+        // Update quantity for the item
+        const updatedItems = items.map(item => {
+            if (item.id === id && item.quantity > 1) {
+                return { ...item, quantity: item.quantity - 1 };
+            }
+            return item;
+        });
+        setItems(updatedItems);
+        // Save updated cart to local storage
+        localStorage.setItem('cart', JSON.stringify(updatedItems));
+    };
 
-  return (
-    <div onClick={onClose} className='cartMainWrapper'>
-        <div onClick={(e) => e.stopPropagation()} className='cartWrapper'>
-            <span onClick={onClose}><FaRegTimesCircle/> </span>
-            {items.map(item => (
-                <div key={item.id} className='content'>
-                    <img src={item.image} alt="" />
-                    <div className='textContent'>
-                        <h3>{item.name}</h3>
-                        <p>&#8358;  {item.price}</p>
-                        <aside>
-                            <button><FaPlus/></button>
-                            <input type='number' disabled value={item.quantity}/>
-                            <button><FaMinus/></button>
-                        </aside>
+    return (
+        <div onClick={onClose} className='cartMainWrapper'>
+            <div onClick={(e) => e.stopPropagation()} className='cartWrapper'>
+                <span onClick={onClose}><FaRegTimesCircle /></span>
+                {items.map(item => (
+                    <div key={item.id} className='content'>
+                        <img src={item.image} alt="" />
+                        <div className='textContent'>
+                            <h3>{item.name}</h3>
+                            <p>&#8358; {item.price}</p>
+                            <aside>
+                                <button onClick={() => handleIncrement(item.id)}><FaPlus /></button>
+                                <input type='number' disabled value={item.quantity} />
+                                <button onClick={() => handleDecrement(item.id)}><FaMinus /></button>
+                            </aside>
+                        </div>
                     </div>
-                </div>
-            ))}
+                ))}
+            </div>
         </div>
-    </div>
-  )
-}
+    );
+};
 
-export default SideCart
+export default SideCart;

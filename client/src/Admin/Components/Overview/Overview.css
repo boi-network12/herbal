@@ -1,0 +1,12 @@
+.OverviewWrapper{
+    width: 100%;
+    height: 95%;
+    background: #ccc;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    overflow-y: auto;
+}

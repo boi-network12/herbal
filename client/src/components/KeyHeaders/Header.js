@@ -11,7 +11,7 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
     const [cart, setCart] = useState(false);
     const [searchBtn, setSearchBTn] = useState(false);
-    const { currentUser, logout } = useAuth(); // Access currentUser here
+    const { currentUser, logout } = useAuth(); 
 
     const toggleCart = () => {
         setCart(!cart);
@@ -51,12 +51,12 @@ const Header = () => {
 
                     <ul className={`navBar ${navOpen ? "open" : "closed"}`}>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about-us">About Us</Link></li>
-                        <li><Link to="/contact-us">Contact us</Link></li>
+                        <li><Link to="/about-us">About</Link></li>
+                        <li><Link to="/contact-us">Contact</Link></li>
                         <li><Link to="/terms">Terms & Condition</Link></li>
                         {currentUser ? (
                             <li>
-                                <Link to="/profile">Shop</Link>
+                                <Link to="/shop/product">Shop</Link>
                             </li>
                         ) : (
                             <li>
@@ -65,7 +65,7 @@ const Header = () => {
                         )}
                         {currentUser && currentUser.role === "admin" && (
                             <li>
-                                <Link to="/admin">Admin</Link>
+                                <Link to="/admin/dashboard" >Admin</Link>
                             </li>
                         )}
                         {currentUser && 

@@ -1,74 +1,177 @@
-.testContainer {
+.TextWrapper{
+    width: 100%;
     padding: 20px;
-    height: 60rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.newsCard, .testimonyCard {
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.TextWrapper .ArticleContainer{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px;
 }
 
-.newsCard:hover, .testimonyCard:hover {
-    transform: scale(1.05);
+.TextWrapper .ArticleContainer .box {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    width: 300px;
+    height: 340px;
+    padding: 15px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
 }
 
-.newsTitle {
-    font-weight: bold;
+.TextWrapper .ArticleContainer .box > img{
+    width: 100%;
+    border-radius: 15px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.TextWrapper .ArticleContainer .box > div{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 40px;
+    backdrop-filter: blur(10px);
+}
+
+.TextWrapper .ArticleContainer .box > div h3{
+    color: #fff;
+    text-align: left;
+    width: 100%;
+    padding-left: 30px;
+    text-shadow: 3px 3px 0px rgba(0,0,0,0.1);
+    text-transform: capitalize;
+}
+
+.TextWrapper .ArticleContainer .box:hover > div{
+    height: 100px;
+}
+
+.TextWrapper .ArticleContainer .box:hover > div p{
+    display: block;
+}
+
+.TextWrapper .ArticleContainer .box > div p{
     color: #333;
+    height: 100%;
+    background: #ddd;
+    text-align: left;
+    width: 100%;
+    padding: 20px;
+    padding-top: 4px;
+    display: none;
 }
 
-.newsDescription {
-    color: #555;
+
+/*  */
+
+.TextWrapper .testWrapper {
+    display: flex;
+    overflow: hidden;
+    width: 400px;
+    height: 400px;
+    margin-bottom: 50px;
+    position: relative;
+    background-color: #f5f5f5;
 }
 
-.testimonyAvatar {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 10px;
+.TextWrapper .testWrapper > div {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
 }
 
-.testimonyName {
+.TextWrapper .testWrapper > div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.TextWrapper .testWrapper .testimonial-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: #fff;
+    width: calc(100% - 40px);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for better text readability */
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.TextWrapper .testWrapper .testimonial-content h2 {
+    font-size: 2rem;
     font-weight: bold;
-    margin-top: 10px;
-    color: #333;
+    margin: 0;
 }
 
-.testimonyDescription {
-    color: #555;
+.TextWrapper .testWrapper .testimonial-content h3 {
+    font-size: 1.5rem;
+    margin: 0;
 }
 
-.testimonyIndicators .indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background-color: gray;
-    margin: 0 4px;
-    transition: background-color 0.3s;
+.TextWrapper .testWrapper .testimonial-content p {
+    font-size: 1rem;
+    margin: 10px 0 0;
 }
 
-.testimonyIndicators .indicator.active {
-    background-color: black;
-}
 
 @media only screen and (max-width: 767px) {
-    .testContainer {
-        padding: 10px;
-        height: 85rem;
+    .TextWrapper .testWrapper {
+        height: 300px; /* Adjust height as needed */
     }
 
-    .newsCard, .testimonyCard {
-        margin-bottom: 20px;
+    .TextWrapper .testWrapper > div h2 {
+        font-size: 1.5rem;
+    }
+
+    .TextWrapper .testWrapper > div .testimonial-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .TextWrapper .testWrapper > div .testimonial-content p {
+        font-size: 0.9rem;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .TextWrapper{
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .TextWrapper .ArticleContainer{
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .TextWrapper .ArticleContainer .box {
+        width: 100%;
     }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .testContainer {
-        padding: 15px;
-        height: 80rem;
-    }
-
-    .newsCard, .testimonyCard {
-        margin-bottom: 25px;
+    .TextWrapper{
+        grid-template-columns: repeat(1, 1fr);
     }
 }

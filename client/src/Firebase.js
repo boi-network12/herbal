@@ -25,5 +25,8 @@ const storage = getStorage(app);
 
 export const userCollectionRef = collection(db, 'users');
 
+export const newsCollectionRef = collection(db, 'news');
+export const productsCollectionRef = collection(db, 'products');
+
 export {auth, db, storage, app};
 

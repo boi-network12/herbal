@@ -1,0 +1,57 @@
+.NewsPostContainer{
+    width: 300px;
+    background: #ddd;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
+.NewsPostContainer> h2{
+    color: #333;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+
+.NewsPostContainer > form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.NewsPostContainer > form input,
+.NewsPostContainer > form textarea{
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    border-radius: 2px;
+}
+
+.NewsPostContainer > form input{
+    height: 45px;
+}
+
+.NewsPostContainer > form textarea{
+    padding: 10px;
+}
+
+.NewsPostContainer > form p{
+    cursor: pointer;
+    background: #f2f2f2;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.NewsPostContainer > form button{
+    width: 100%;
+    height: 40px;
+    background: #1d54ebe7;
+    color: #f2f2f2;
+    border: none;
+    cursor: pointer;
+}

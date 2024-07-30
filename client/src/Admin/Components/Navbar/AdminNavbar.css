@@ -1,0 +1,72 @@
+.AdminNavbarContainer{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #ccc;
+    width: 300px;
+    padding: 1% 2%;
+}
+
+.AdminNavbarContainer h1{
+    color: #1d54ebe7;
+    font-size: 1.3rem;
+    text-shadow: 0 0 4px rgba(0,0,0,0.1);
+    text-transform: uppercase;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    padding: 0 5px;
+}
+
+.AdminNavbarContainer > nav{
+    width: 100%;
+    height: 100%;
+}
+
+.AdminNavbarContainer > nav a{
+    margin-bottom: 5px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #333;
+    transition: all .2s ease;
+}
+
+.AdminNavbarContainer > nav a.active{
+    color: #1d54ebe7;
+    position: relative;
+}
+
+.AdminNavbarContainer > nav a.active::before{
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    background: #ddd;
+    border-radius: 50%;
+    opacity: 0.6;
+    left: 30px;
+}
+
+.AdminNavbarContainer > nav a:hover{
+    color: #1d54ebe7;
+    opacity: 0.9;
+}
+
+.AdminNavbarContainer .logout{
+    width: 100%;
+    display: flex;
+    height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #ee4e26ee;
+    border-top: 1px dotted #333;
+    cursor: pointer;
+}

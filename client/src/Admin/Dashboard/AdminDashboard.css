@@ -1,0 +1,49 @@
+.AdminDashboardContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.AdminDashboardContainer .HeadingBox{
+    width: 100%;
+    background: #1d54ebe7;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 3%;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 5px rgba(0,0,0,0.1);
+}
+
+.AdminDashboardContainer .HeadingBox h1{
+    color: #f2f2f2;
+    font-size: 1.3rem;
+    text-shadow: 0 0 4px rgba(0,0,0,0.1);
+    text-transform: capitalize;
+}
+
+.AdminDashboardContainer .HeadingBox p{
+    color: #f2f2f2;
+    font-size: 0.9rem;
+    text-shadow: 0 0 4px rgba(0,0,0,0.1);
+    text-transform: capitalize;
+}
+
+.AdminDashboardContainer .NavContainerOverview{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: #ddd;
+    margin-top: 4rem;
+    height: 100%;
+    gap: 5px;
+    padding-right: 5px;
+}

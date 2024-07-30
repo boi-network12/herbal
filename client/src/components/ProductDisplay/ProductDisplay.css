@@ -78,7 +78,7 @@
     margin: 10px;
 }
 
-.productDWrapper .productItem a button{
+.productDWrapper .productItem  button{
     all: unset;
     border: 2px solid #295536;
     border-radius: 10px;
@@ -88,7 +88,7 @@
 }
 
 
-.productDWrapper .productItem a:hover button{
+.productDWrapper .productItem button:hover {
     background: #ffca41;
     border: none;
 }
