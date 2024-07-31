@@ -83,7 +83,7 @@
 .TextWrapper .testWrapper {
     display: flex;
     overflow: hidden;
-    width: 350px;
+    width: 300px;
     height: 300px;
     margin-bottom: 50px;
     position: relative;
