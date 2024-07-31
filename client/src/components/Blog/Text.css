@@ -83,7 +83,7 @@
 .TextWrapper .testWrapper {
     display: flex;
     overflow: hidden;
-    width: 300px;
+    width: 340px;
     height: 300px;
     margin-bottom: 50px;
     position: relative;
@@ -92,18 +92,17 @@
 .TextWrapper .testWrapper > div {
     display: flex;
     transition: transform 0.5s ease-in-out;
-    width: 1500px;
+    width: 100%;
     height: 70%;
     position: absolute;
     left: 0;
 }
 
 .TextWrapper .testWrapper > div img {
-    width: 350px;
+    width: 340px;
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .TextWrapper .testWrapper .testimonial-content {

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./Header.css";
 import { FaBars, FaFacebook, FaInstagram, FaLinkedin, FaSearch, FaTimes, FaTwitter } from 'react-icons/fa';
 import { BiCart } from "react-icons/bi";
@@ -11,7 +11,19 @@ const Header = () => {
     const [navOpen, setNavOpen] = useState(false);
     const [cart, setCart] = useState(false);
     const [searchBtn, setSearchBTn] = useState(false);
+    const [cartItemCount, setCartItemCount] = useState(0); // State for cart item count
     const { currentUser, logout } = useAuth(); 
+
+    useEffect(() => {
+        // Function to get cart item count from local storage
+        const getCartItemCount = () => {
+            const cartItems = JSON.parse(localStorage.getItem('cart')) || [];
+            return cartItems.length;
+        };
+
+        // Update cart item count when component mounts or when cart changes
+        setCartItemCount(getCartItemCount());
+    }, [cart]); // Depend on `cart` state to recalculate item count when cart is toggled
 
     const toggleCart = () => {
         setCart(!cart);
@@ -44,7 +56,9 @@ const Header = () => {
                         <p onClick={toggleNav} className='barTime'>
                             {navOpen ? <FaTimes/> : <FaBars/>}
                         </p>
-                        <p onClick={toggleCart}><BiCart/><span>0</span> $0</p>
+                        <p onClick={toggleCart}>
+                            <BiCart/><span>{cartItemCount}</span> $0
+                        </p>
                         <p></p>
                         <p onClick={toggleSearch}><FaSearch/></p>
                     </div>

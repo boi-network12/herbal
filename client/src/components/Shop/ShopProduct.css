@@ -1,0 +1,74 @@
+.ShopProductWrapper{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 5px 10px;
+}
+
+.ShopProductWrapper > div{
+    width: 250px;
+    box-shadow: 0 0 3px rgba(0,0,0,0.2);
+    height: 280px;
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.ShopProductWrapper > div:hover img{
+    scale: 0.95;
+}
+
+.ShopProductWrapper > div img{
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 13px 13px 0 0;
+}
+
+.ShopProductWrapper > div > div p,
+.ShopProductWrapper > div > div h4{
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+.ShopProductWrapper > div button{
+    cursor: pointer;
+    background: #1f943c;
+    border: none;
+    padding: 3px 5px;
+    font-size: 0.8rem;
+    margin-top: 4px;
+    border-radius: 2px;
+    color: #f2f2f2;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+}
+
+
+
+
+@media only screen and (max-width: 767px) {
+    /* CSS rules for mobile devices */
+    /* CSS rules for tablets */
+    .ShopProductWrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .ShopProductWrapper > div{
+        width: 190px;
+    }
+
+    .ShopProductWrapper > div{
+        height: 250px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    /* CSS rules for tablets */
+    .ShopProductWrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

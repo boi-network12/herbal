@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import "./sideCart.css";
 import { FaRegTimesCircle, FaWhatsapp } from "react-icons/fa";
-import { Link } from "react-router-dom"
 
 const SideCart = ({ onClose }) => {
     const [items, setItems] = useState([]);
@@ -12,7 +11,15 @@ const SideCart = ({ onClose }) => {
         setItems(cartItems);
     }, []);
 
-    
+    const handleWhatsAppClick = (itemId) => {
+        // Remove the item from local storage
+        const updatedItems = items.filter(item => item.id !== itemId);
+        localStorage.setItem('cart', JSON.stringify(updatedItems));
+        setItems(updatedItems);
+
+        // Navigate to WhatsApp with a specific URL
+        window.location.href = `https://wa.me/+012345679`;
+    };
 
     return (
         <div onClick={onClose} className='cartMainWrapper'>
@@ -25,10 +32,8 @@ const SideCart = ({ onClose }) => {
                             <h3>{item.name}</h3>
                             <p>&#8358; {item.price}</p>
                             <aside>
-                                <button>
-                                    <Link style={{textDecoration: "none"}} to="https://wa.me/+012345679">
-                                        <FaWhatsapp color='#f2f2f2' size={22}/>
-                                    </Link>
+                                <button onClick={() => handleWhatsAppClick(item.id)}>
+                                    <FaWhatsapp color='#f2f2f2' size={22} />
                                 </button>
                             </aside>
                         </div>

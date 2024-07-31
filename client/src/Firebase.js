@@ -27,6 +27,8 @@ export const userCollectionRef = collection(db, 'users');
 
 export const newsCollectionRef = collection(db, 'news');
 export const productsCollectionRef = collection(db, 'products');
+export const reportCollectionRef = collection(db, 'reports');
+
 
 export {auth, db, storage, app};
 
