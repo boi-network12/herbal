@@ -43,7 +43,7 @@ const SideCart = ({ onClose }) => {
                 <span onClick={onClose}><FaRegTimesCircle /></span>
                 {items.map(item => (
                     <div key={item.id} className='content'>
-                        <img src={item.image} alt="" />
+                        <img src={item.imageUrl} alt="" />
                         <div className='textContent'>
                             <h3>{item.name}</h3>
                             <p>&#8358; {item.price}</p>

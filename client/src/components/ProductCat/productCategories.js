@@ -25,7 +25,7 @@ const item = [
 const ProductCategories = () => {
   return (
     <div className='secondHomeC'>
-        <img className="secondHomeBg" src={require("../../assets/Group-4-1-700x1024.png")} alt="" />
+        
         <div className='first1'>
             <h1>Product Categories</h1>
             <p>
