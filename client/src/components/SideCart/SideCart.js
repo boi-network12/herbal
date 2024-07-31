@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "./sideCart.css";
-import { FaMinus, FaPlus, FaRegTimesCircle } from "react-icons/fa";
+import { FaRegTimesCircle, FaWhatsapp } from "react-icons/fa";
+import { Link } from "react-router-dom"
 
 const SideCart = ({ onClose }) => {
     const [items, setItems] = useState([]);
@@ -11,31 +12,7 @@ const SideCart = ({ onClose }) => {
         setItems(cartItems);
     }, []);
 
-    const handleIncrement = (id) => {
-        // Update quantity for the item
-        const updatedItems = items.map(item => {
-            if (item.id === id) {
-                return { ...item, quantity: item.quantity + 1 };
-            }
-            return item;
-        });
-        setItems(updatedItems);
-        // Save updated cart to local storage
-        localStorage.setItem('cart', JSON.stringify(updatedItems));
-    };
-
-    const handleDecrement = (id) => {
-        // Update quantity for the item
-        const updatedItems = items.map(item => {
-            if (item.id === id && item.quantity > 1) {
-                return { ...item, quantity: item.quantity - 1 };
-            }
-            return item;
-        });
-        setItems(updatedItems);
-        // Save updated cart to local storage
-        localStorage.setItem('cart', JSON.stringify(updatedItems));
-    };
+    
 
     return (
         <div onClick={onClose} className='cartMainWrapper'>
@@ -48,9 +25,11 @@ const SideCart = ({ onClose }) => {
                             <h3>{item.name}</h3>
                             <p>&#8358; {item.price}</p>
                             <aside>
-                                <button onClick={() => handleIncrement(item.id)}><FaPlus /></button>
-                                <input type='number' disabled value={item.quantity} />
-                                <button onClick={() => handleDecrement(item.id)}><FaMinus /></button>
+                                <button>
+                                    <Link style={{textDecoration: "none"}} to="https://wa.me/+012345679">
+                                        <FaWhatsapp color='#f2f2f2' size={22}/>
+                                    </Link>
+                                </button>
                             </aside>
                         </div>
                     </div>
